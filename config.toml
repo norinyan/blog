@@ -1,0 +1,4 @@
+baseURL = 'http://blog.100776.xyz'
+languageCode = 'zh-cn'
+title = '富贵儿的小站'
+theme = "PaperMod"
