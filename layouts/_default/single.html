@@ -23,8 +23,8 @@
       {{ .Content }}
     </div>
     <nav class="article-pager" aria-label="章节翻页">
-      {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
-      {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+      {{ with .NextInSection }}<a class="prev-page" href="{{ .RelPermalink }}">← 上一篇：{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{ with .PrevInSection }}<a class="next-page" href="{{ .RelPermalink }}">下一篇：{{ .Title }} →</a>{{ end }}
     </nav>
   </article>
 

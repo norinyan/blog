@@ -1,10 +1,10 @@
 baseURL = 'https://blog.norin.me/'
-languageCode = 'zh-cn'
-title = 'Norvyn'
+locale = 'zh-CN'
+title = 'Nor Blog'
 
 [params]
-  description = '自动驾驶、控制算法、工程实践与个人知识输出。'
-  author = 'Norvyn'
+  description = '学习、研究与成长记录。'
+  author = 'norin'
 
 [markup]
   [markup.tableOfContents]
@@ -21,6 +21,6 @@ title = 'Norvyn'
     url = '/'
     weight = 1
   [[menu.main]]
-    name = '自动驾驶控制：入门篇'
-    url = '/auto-control-beginner/'
+    name = '专栏'
+    url = '/#series'
     weight = 2
