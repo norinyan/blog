@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="series-landing">
+  <p class="eyebrow">Series</p>
+  <h1>{{ .Title }}</h1>
+  <div class="series-description">{{ .Content }}</div>
+  <div class="chapter-list">
+    {{ range .Pages.ByWeight }}
+    <a class="chapter-row" href="{{ .RelPermalink }}">
+      <span class="chapter-number">{{ printf "%02d" .Weight }}</span>
+      <span>
+        <strong>{{ .Title }}</strong>
+        <em>{{ .Description }}</em>
+      </span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

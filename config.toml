@@ -1,4 +1,26 @@
-baseURL = 'https://blog.norin.me'
+baseURL = 'https://blog.norin.me/'
 languageCode = 'zh-cn'
-title = '富贵儿的小站'
-theme = "PaperMod"
+title = 'Norvyn'
+
+[params]
+  description = '自动驾驶、控制算法、工程实践与个人知识输出。'
+  author = 'Norvyn'
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+
+[menu]
+  [[menu.main]]
+    name = '首页'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = '自动驾驶控制：入门篇'
+    url = '/auto-control-beginner/'
+    weight = 2

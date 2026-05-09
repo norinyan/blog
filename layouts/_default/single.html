@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="doc-shell">
+  <aside class="series-sidebar" aria-label="系列章节">
+    <a class="back-link" href="/auto-control-beginner/">← 返回专栏</a>
+    <h2>自动驾驶控制：入门篇</h2>
+    <nav>
+      {{ $current := .RelPermalink }}
+      {{ range (site.GetPage "section" "auto-control-beginner").Pages.ByWeight }}
+      <a class="{{ if eq .RelPermalink $current }}active{{ end }}" href="{{ .RelPermalink }}">
+        <span>{{ printf "%02d" .Weight }}</span>{{ .Title }}
+      </a>
+      {{ end }}
+    </nav>
+  </aside>
+
+  <article class="article">
+    <header class="article-header">
+      <p class="eyebrow">{{ .Params.series }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="summary">{{ . }}</p>{{ end }}
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+    <nav class="article-pager" aria-label="章节翻页">
+      {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </nav>
+  </article>
+
+  <aside class="toc-sidebar" aria-label="本文目录">
+    <div class="toc-box">
+      <strong>本文目录</strong>
+      {{ .TableOfContents }}
+    </div>
+  </aside>
+</div>
+{{ end }}
